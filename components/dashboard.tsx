@@ -60,9 +60,11 @@ export default function Dashboard() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  <SidebarMenuButton tooltip="Inventario">
-                    <Package className="h-5 w-5" />
-                    <span className="font-medium">Inventario</span>
+                  <SidebarMenuButton asChild tooltip="Inventario" isActive={pathname === "/inventario"}>
+                    <Link href="/inventory">
+                      <Package className="h-5 w-5" />
+                      <span className="font-medium">Inventario</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
@@ -74,9 +76,11 @@ export default function Dashboard() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  <SidebarMenuButton tooltip="Reportes">
-                    <TrendingUp className="h-5 w-5" />
-                    <span className="font-medium">Reportes</span>
+                  <SidebarMenuButton asChild tooltip="Reportes" isActive={pathname === "/reportes"}>
+                    <Link href="/reportes">
+                      <TrendingUp className="h-5 w-5" />
+                      <span className="font-medium">Reportes</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
@@ -218,4 +222,3 @@ export default function Dashboard() {
     </SidebarProvider>
   )
 }
-

@@ -1,11 +1,11 @@
 import type React from "react"
-import Dashboard from "@/components/dashboard"
+import { OrdersView } from "@/components/orders/orders-view"
 
 export default function OrdersLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <Dashboard>{children}</Dashboard>
+  return <OrdersView>{children}</OrdersView>
 }
 
